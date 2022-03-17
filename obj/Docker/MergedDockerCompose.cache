@@ -1,0 +1,15 @@
+services:
+  integrationtest:
+    build:
+      context: C:\Users\SAMSUNG\Downloads\IntegrationTest-master
+      dockerfile: IntegrationTest/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: integrationtest
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\SAMSUNG\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+version: '3.4'
